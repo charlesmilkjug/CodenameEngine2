@@ -43,10 +43,17 @@ class DebugOptionsScreen extends OptionsScreen {
 			"Pretty Print",
 			"If checked, the saved files from the editor will be formatted to be easily viewable (does not apply to xmls...)",
 			"editorPrettyPrint"));
-		add(new Checkbox(
-			"Intensive Blur",
-			"If checked, will use more intensive blur that may be laggier but look better.",
-			"intensiveBlur"));
+		add (new Checkbox(
+			"Blur BG",
+			"If checked, a blur will present in the background if a pop up window opens. This can be laggy for some pcs.",
+			"blurBG"));
+		// make this an array later!!
+		add(new ArrayOption(
+			"Blur Quality",
+			"Change the quality of the blur. The lower the more optimized at the cost of visuals.",
+			["highBlur", "mediumBlur", "lowBlur"],
+			["High", "Medium", "Low"],
+			"blurQuality"));
 		add(new Checkbox(
 			"Editor Autosaves",
 			"If checked, this will autosave your files in the editor, with the settings listed below.",
